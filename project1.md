@@ -56,9 +56,9 @@ This is the result we get, which indicates that Germany exhibited the most signi
 ### Question 6
 ```==``` checks if left-hand side is exactly the same with the right-hand side. It returns TRUE if these two match, and FALSE otherwise.
 
-```&``` stands for AND. It returns TRUE only when all of the arguments are TRUE.
+```&``` is bitwise AND operator. It returns TRUE only when all of the arguments are TRUE.
 
-```|``` stands for OR. It returns TRUE when any one of the arguments is TRUE.
+```|``` is bitwise OR operator. It returns TRUE when any one of the arguments is TRUE.
 
 In programming, the above three operators are powerful in terms of selecting desired data from data frame. For example, if we want to select all data for Asia in year 2007, we can use the following command to slice out those data that are both for Asia AND for year 2007.
 ```
@@ -68,6 +68,9 @@ If we want to select data that are either for Asia OR for Europe, we can use ```
 ```
 df.loc[(df['continent'] == 'Asia') & (df['continent'] == 'Africa')]
 ```
+
+```^``` is bitwise XOR (exclusive OR) operator. When we pass two arguments, the issue for OR operator is that it can not tell if both of them are TRUE or only one of them is. For ```^```, it returns TRUE only when one of them is TRUE. For example, ```(1==1) ^ ('apple' == 'apple')``` will return FALSE since both of them are TRUE.
+
 ### Question 7 (?)
 ```loc``` locates rows and columns through labels of index. ```iloc``` locates rows and columns through positions, which are in the form of integers, of the index.
 
