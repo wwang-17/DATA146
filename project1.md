@@ -26,5 +26,5 @@ path_to_file = #some specific path to the target file
 df = pd.read_tsv(path_to_file, sep = '\t') #use tab as the separator
 ```
 Since the data we want to import may be stalled in different types, it is important to specify the specific type after ```read_```. In the above example, we 
-are dealing with tsv for which tab is the separator. If, say, we are now dealing with csv file for which comma is the seprator, we need to use ```read_csv``` instead and set ```sep = , ```.
+are dealing with tsv for which tab is the separator. If, say, we are now dealing with csv file for which comma is the seprator, we need to use ```read_csv``` instead and set ```sep = ', ' ```.
 
