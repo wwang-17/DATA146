@@ -53,5 +53,62 @@ This is the result we get, which indicates that Germany exhibited the most signi
 
 ![](gdp.png)
 
+### Question 6
+```==``` checks if left-hand side is exactly the same with the right-hand side. It returns TRUE if these two match, and FALSE otherwise.
 
+```&``` stands for AND. It returns TRUE only when all of the arguments are TRUE.
 
+```|``` stands for OR. It returns TRUE when any one of the arguments is TRUE.
+
+In programming, the above three operators are powerful in terms of selecting desired data from data frame. For example, if we want to select all data for Asia in year 2007, we can use the following command to slice out those data that are both for Asia AND for year 2007.
+```
+df.loc[(df['continent'] == 'Asia') & (df['year'] == 2007)]
+```
+If we want to select data that are either for Asia OR for Europe, we can use ```|```,
+```
+df.loc[(df['continent'] == 'Asia') & (df['continent'] == 'Africa')]
+```
+### Question 7 (?)
+```loc``` locates rows and columns through labels of index. ```iloc``` locates rows and columns through positions, which are in the form of integers, of the index.
+
+### Question 8
+api acts as a bridge between two applications. It is able to deliver our requests to the provider, where our targets locate, and then it is able to deliver the response back to us.
+In order to construct a request to remote server, we need the requests library and then give the url for our desired data,
+```
+import requests
+url = #some real url
+```
+Then we need to create a folder that stores a file that will record our downloaded data later.
+```
+# Use the os library for this
+import os
+
+#build a folder called 'data'
+data_folder = 'data'
+if not os.path.exists(data_folder):
+    os.makedirs(data_folder)
+
+# Now construct the file name
+file_name_short = 'ctp_' + str(dt.now(tz = pytz.utc)).replace(' ', '_') + '.csv'
+file_name = os.path.join(data_folder, file_name_short)
+
+```
+We can now retrives the content from url and open our output file for writing (w) in binary mode (b). After that, we can do the regular import of data through pandas. Then we can manipulations we want to the data frame in the workspace.
+```
+r = requests.get(url)
+with open(file_name, 'wb') as f:
+    f.write(r.content)
+    
+import pandas as pd
+df = pd.read_csv(file_name)
+```
+### Question 9
+
+Pandas.apply allow the users to pass a function and apply it on every single value of the Pandas series. For example, if we want the sum for every column in a data frame, instead of wirting a loop that iterate each column, now we can use ```df.apply(np.sum, axis = 0)```
+The apply function has easier syntax and thus less chance to introduce bugs. In addition, although apply function also loops through an axis, it is still more efficient due to some internal optimization.
+
+### Question 10
+Use ```loc```. For example, if we simply want ```country``` and ```year``` column for the above data frame. We can do that through specifying the column labels we want, keep all rows through ```:``` and assign it to a new data frame.
+```
+df_new = df[:, ['country', 'year']]
+```
