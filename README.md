@@ -1,5 +1,3 @@
-# header
+# DATA 146
 
-This is an experiment for merging branches
-
-- [This is a link](https://www.google.com/)
+[project 1] (https://wwang-17.github.io/New_Project/project1.html) 
