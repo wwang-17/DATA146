@@ -49,6 +49,8 @@ Then we just keep ```country``` and ```totalGDP``` column and sort them in desce
 ```
 x.loc[:,['country', 'totalGDP']].sort_values('totalGDP', ascending = False)
 ```
+This is the result we get, which indicates that Germany exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007).
+![](gdp.png)
 
 
 
