@@ -33,5 +33,22 @@ One way to describe the data frame is to use ```df.shape```. You can use ```df.s
 ### Question 3
 Through interogatting year column with ```df['year']```, I found that the every 12 rows form a subset, and each subset has a range from 1952-2007 with an interval of 5 years. There are in total 1704/12 = 142 subsets. If we want to add more rows to make it more up to date, we can add year 2012 and 2017 to each subset. Since there are 6 columns, we need to add 12 more new outcomes for each subset.
 
+### Question 4
+We could use ```df.loc[df['lifeExp'].idxmin()]``` to find that Rwanda in year 1992 has the shortest life expectancy of only 23.599. This is probably because of the large-scale civil war in Rwanda from 1990-1994.
+
+### Question 5
+Firstly, create a new column called ```totalGDP``` as the product of ```pop``` and ```gdpPercap``` and store it in the original df,
+```
+df['totalGDP'] = df['pop'] * df['gdpPercap']
+```
+Then slice out the 4 countries data in 2007. We can do this by first slicing out all rows in year 2007 and then slice out those whose ```country``` matches what we want.
+```
+x = df.loc[(df['year'] == 2007) & ((df['country'] == 'Germany') | (df['country'] == 'France') | (df['country'] == 'Italy') | (df['country'] == 'Spain'))]
+```
+Then we just keep ```country``` and ```totalGDP``` column and sort them in descending order.
+```
+x.loc[:,['country', 'totalGDP']].sort_values('totalGDP', ascending = False)
+```
+
 
 
