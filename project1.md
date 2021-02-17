@@ -24,10 +24,14 @@ A data frame is a 2-dimensional data structure with columns of potentially diffe
 In order to import the data from a remote location. You need to use ```read_csv``` function in pandas library and specify the location of file and its separator.
 ```
 path_to_file = #some specific path to the target file
-df = pd.read_tsv(path_to_file, sep = '\t') #use tab as the separator
+df = pd.read_csv(path_to_file, sep = '\t') #use tab as the separator
 ```
-Since the data we want to import may be stalled in different types, it is important to specify the specific type after ```read_```. In the above example, we 
-are dealing with tsv for which tab is the separator. If, say, we are now dealing with csv file for which comma is the seprator, we need to use ```read_csv``` instead and set ```sep = ', ' ```.
+It is important to specify the type of data we are dealing with after the ```read_```. Here as an example we are dealing with tsv file so we use ```read_csv``` and set tab as the separator. We are also able to use ```read_excel```,```read_sql```, etc.
 
 One way to describe the data frame is to use ```df.shape```. You can use ```df.shape[0]``` to get the number of rows, and ```df.shape[1]``` to get the number of columns. Alternatively, you can use ```len(df.index)``` to get the number of rows, and ```len(df.columns)``` to get the number of columns.
+
+### Question 3
+Through interogatting year column with ```df['year']```, I found that the every 12 rows form a subset, and each subset has a range from 1952-2007 with an interval of 5 years. There are in total 1704/12 = 142 subsets. If we want to add more rows to make it more up to date, we can add year 2012 and 2017 to each subset. Since there are 6 columns, we need to add 12 more new outcomes for each subset.
+
+
 
