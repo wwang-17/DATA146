@@ -2,11 +2,8 @@
 Packages are namespaces which contain multiple packages and modules themselves. They are simply directories that must contain special files called ```__init__.py``` 
 in order to indicate that the directory it contains is a python package. Libraries are collections of packages.
 
-In order to use packages, you need to first install them(with the two packages we used in class as an example):
-```
-pip install pandas
-pip install numpy
-```
+In order to use packages, you need to first install them: go to preference, select the + sign, and search for the package we want to install.
+
 Then we need to import them to the local workspace:
 ```
 import pandas
@@ -71,8 +68,10 @@ df.loc[(df['continent'] == 'Asia') & (df['continent'] == 'Africa')]
 
 ```^``` is bitwise XOR (exclusive OR) operator. When we pass two arguments, the issue for OR operator is that it can not tell if both of them are TRUE or only one of them is. For ```^```, it returns TRUE only when one of them is TRUE. For example, ```(1==1) ^ ('apple' == 'apple')``` will return FALSE since both of them are TRUE.
 
-### Question 7 (?)
+### Question 7
 ```loc``` locates rows and columns through labels of index. ```iloc``` locates rows and columns through positions, which are in the form of integers, of the index.
+To select consecutive observations of data, say from row 2 to 4, one can simply use loc: ```df.loc[2:5]```.
+To select all observcations for a series of consecutive columns, say from column 2 to 4, one can simply use iloc: ```df.iloc[:][2:5]```.
 
 ### Question 8
 api acts as a bridge between two applications. It is able to deliver our requests to the provider, where our targets locate, and then it is able to deliver the response back to us.
