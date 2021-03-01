@@ -27,3 +27,12 @@ high school, BS, MS, PhD), ethnicity(nominal: minority/non-minority), and averag
 
 ![](beta_left.png)
 
+### Question 3
+* Histogram for raw data
+![](LifeExpRaw.png)
+
+* Histogram for log transformed data
+![](LifeExpLog.png)
+
+Both of them are able to show to following characteristics:
+** hufhoewih
