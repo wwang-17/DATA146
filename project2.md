@@ -41,4 +41,15 @@ Both of them are able to show to following characteristics:
 * Both mean and median for life expectancy of the year 2007 are higher compared to those of 1952.
 * The distribution for 2007 is lef-skewed with a significant proportion of countries with life expectancy over 70(1.8 for log-transformed one). 
 
-With two plots both able to convey the same information, the raw data one is preferred since it is able to show the numerical information more directly through its x-axis. 
+With two plots both able to convey the same information, the raw data one is preferred since it is able to show the numerical information more directly through its x-axis.
+
+### Question 4
+* population(raw data)
+
+![](PopRaw.png)
+
+* population(log-transformed)
+
+![](PopLog.png)
+
+It is better to pick the log-transformed one. The one plotted using raw data has y-axis with really large scale. The box parts, as a result, are too tiny for us to estmiate the mean and quantiles. It is also difficult to visualize the difference of boxplots for each year.
