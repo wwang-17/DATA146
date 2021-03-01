@@ -29,10 +29,16 @@ high school, BS, MS, PhD), ethnicity(nominal: minority/non-minority), and averag
 
 ### Question 3
 * Histogram for raw data
+
 ![](LifeExpRaw.png)
 
 * Histogram for log transformed data
+
 ![](LifeExpLog.png)
 
 Both of them are able to show to following characteristics:
-** hufhoewih
+* From 1952 to 2007, the distribution as a whole shifts to the right. This indicates that the general life expetation has become longer globally.
+* Both mean and median for life expectancy of the year 2007 are higher compared to those of 1952.
+* The distribution for 2007 is lef-skewed with a significant proportion of countries with life expectancy over 70(1.8 for log-transformed one). 
+
+With two plots both able to convey the same information, the raw data one is preferred since it is able to show the numerical information more directly through its x-axis. 
