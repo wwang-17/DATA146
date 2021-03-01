@@ -17,10 +17,12 @@ high school, BS, MS, PhD), ethnicity(nominal: minority/non-minority), and averag
 2) When alpha<beta, the mean for beta distribution will be greater than its median, which indicates a right-skewed distribution. Below is an example with alpha = 1.5 and beta = 5.
 * mean = 0.22042345183582107
 * median = 0.1903307503513733
+
 ![](beta_right.png)
 
 3) When alpha<beta, the mean for beta distribution will be smaller than its median, which indicates a left-skewed distribution. Below is an example with alpha = 5 and beta = 1.5.
 * mean = 0.770204270403717
 * median = 0.798167645798253
+
 ![](beta_left.png)
 
