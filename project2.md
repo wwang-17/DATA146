@@ -52,4 +52,4 @@ With two plots both able to convey the same information, the raw data one is pre
 
 ![](PopLog.png)
 
-It is better to pick the log-transformed one. The one plotted using raw data has y-axis with really large scale. The box parts, as a result, are too tiny for us to estmiate the mean and quantiles. It is also difficult to visualize the difference of boxplots for each year.
+It is better to pick the log-transformed one. The one plotted using raw data has y-axis with really large scale. The box parts, as a result, are too tiny for us to estmiate the mean and quantiles. It is also difficult to visualize the difference of boxplots for each year. The only trend that the raw data plot is able to show is that the maximum population for each year is increasing. Whereas the log-transformed one is also able to show that the mean and interquartile are also increasing overtime.
