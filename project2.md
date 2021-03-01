@@ -12,6 +12,7 @@ high school, BS, MS, PhD), ethnicity(nominal: minority/non-minority), and averag
 1) When alpha=beta, the beta distribution is symmetric with its mean at located at the center. When I set alpha=beta=5 and generate 1000 random observations I got the following distribution.
 * mean = 0.5003436291300151
 * median = 3.5005643139370388
+
 ![](beta1.png)
 
 2) When alpha<beta, the mean for beta distribution will be greater than its median, which indicates a right-skewed distribution. Below is an example with alpha = 1.5 and beta = 5.
