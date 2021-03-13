@@ -177,5 +177,13 @@ For the ridge regression, although previous analysis of `charleston_ask.csv` sug
   * train score: 0.002
   * test score: -0.053
 
+__Conclusion__: For all the above types/specifications of models, the trainning score are still really small and the testing score are all above zero. This indicates that these fitting methods do not work well either for this different dataset.
+
+#### Question 5
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
+
 
 
