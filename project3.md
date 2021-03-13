@@ -179,11 +179,18 @@ For the ridge regression, although previous analysis of `charleston_ask.csv` sug
 
 __Conclusion__: For all the above types/specifications of models, the trainning score are still really small and the testing score are all above zero. This indicates that these fitting methods do not work well either for this different dataset.
 
-#### Question 5
+### Question 5
 
 For this one I tried two additional choices for k (4,6) in order to see the trend more completely.
 
+#### Result for charles_ask.csv
+
 ![](score.png)
+
+#### Result for charles_act.csv
+
+![](score2.png)
+
 
 
 
