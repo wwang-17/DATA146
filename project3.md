@@ -2,8 +2,8 @@
 Given that there are 715 rows in total, I have tried 8, 10, 12, 15 folds and the corresponding average of train and test scores are as the following:
 
 * k = 8
-** train score: 0.019477178686178
-** test score: -0.024545646835335944
+  * train score: 0.019477178686178
+  * test score: -0.024545646835335944
 
 k = 10: train score: 0.019514638368914018; test score: -0.037502267848572614
 
