@@ -180,10 +180,10 @@ For the ridge regression, although previous analysis of `charleston_ask.csv` sug
 __Conclusion__: For all the above types/specifications of models, the trainning score are still really small and the testing score are all above zero. This indicates that these fitting methods do not work well either for this different dataset.
 
 #### Question 5
-fold\model type | Lin_reg | Lin_reg, std | Rig_reg | Rig_reg, std
-| :---: | :---: | :---: | :---:
-Content Cell  | Content Cell | Content Cell | c
-Content Cell  | Content Cell | Content Cell | c
+fold\model type  | Lin_reg       | iii
+---------------- | ------------- | ---
+8                | n             | j
+10               | Content Cell  | j
 
 
 
