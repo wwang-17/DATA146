@@ -29,5 +29,6 @@ If features are not standardized, the optimal alpha value and the correponding t
 
 k = 8: optimal alpha value: 523.232(alpha chosen between [0,700]); train score: 0.019; test score: -0.023
 
-k = 10: optimal alpha value: 523.232; train score: 0.019; test score: -0.023
+k = 10: For this one I have tried a range of [0,8000]. The highest average testing score keep increasing as the alpha value increases. However, as the graph shows the curve is already pretty flat and increasing alpha may not be able to help with testing score much. Hence although I did not find the global maximum, I took 8000 as the optimal alpha value. The corresponding training score is 0.018 and testing score is -0.033.
 
+![]()
