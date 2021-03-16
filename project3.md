@@ -189,9 +189,15 @@ Firstly, for both of these two datasets, there is a general trend that smaller k
 
 We also need to consider testing score to better judge the performance of model. For charles_ask.csv dataset, k=6 always yields the highest testing score. For highter k, such as 10 and above, the training score tends to be much higher than testing score, which indicates overfitting. That's probably because when data set is split into too many folds, only small amount of dataset are used for testing each time, and any possible variation is exaggerated. When k is low, say k=4, the testing score also tends to be low. That's probably because the traing data size is not large enough to capture all the information of the whole dataset. For the charles_act.csv dataset we can see highest traing score when k=6,8,10 for different models.
 
-If we consider both training and testing score, the best model for charles_ask.csv dataset is rid_regression with standardization of features and k=6. The best model for charles_act.csv dataset is linear regression with standardization of both features and targets, k=10.
+Although the score is still not that approximate to 1, the predictive power has alreay been greatly improved compared to fitting results without zipcode considered. The best among them has training score aroung 0.3 and testing score around 0.25, which could be considered as having moderate predictive power.
 
 ### Question 6
+
+If we consider both training and testing score, the best model for charles_ask.csv dataset (we will call it model 1)is rid_regression with zipcode included and standardization of features, k=6. The best model for charles_act.csv dataset (we will call it model 2)is linear regression with zipcode included and standardization of both features and targets, k=10. Both of the models could be considered as underfitting. Model 1 only has a tarining score of 0.278 and testing score of 0.232. Model 2 only has a training score of 0.339 and testing score of 0.263. Although they are high enough compared to other models, they are still really not approximate to 1.
+
+From the analysis we can see that including zipcode has significantly improved the predictive power. On the other hand, changing various types/specifications of the model without zipcode included really does not help much with improving scores. This suggests that while we definitely should try different models, getting more information associated with the targets is probably more important. 
+
+Given that charleston county is really near to the beach, another information could also be included is the distance from the beach. This might offer a more precise prediction compared to the categorical variable, zipcode. Other information could also be considered include the distance from the Ravenel Waterfront Park/Historic Charleston City Market, or number of restaurants/gyms in the community. 
 
 
 
