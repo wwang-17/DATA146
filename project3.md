@@ -181,16 +181,17 @@ __Conclusion__: For all the above types/specifications of models, the trainning 
 
 ### Question 5
 
-For this one I tried two additional choices for k (4,6) in order to see the trend more completely.
+For this one I tried two additional choices for k (4,6) in order to see the trend more completely. The table on the above are results for charles_ask.csv and the table below are results for charles_act.csv. The highest training and testing score for each type of model are marked in blue and green respectively.
 
-#### Result for charles_ask.csv
+![](score_all.png)
 
-![](score.png)
+Firstly, for both of these two datasets, there is a general trend that smaller k tends to get a higher training score. That's probably because (k-1)/k of the dataset is used for training, which means that less data points will be used for training for smaller k. Since there is probably less variation exsiting among less datapoints, the fitted linear model tends to get a higher training score. However, this trend is not too abvious, and as the k gets larger the trainng score does not decrease too much.
 
-#### Result for charles_act.csv
+We also need to consider testing score to better judge the performance of model. For charles_ask.csv dataset, k=6 always yields the highest testing score. For highter k, such as 10 and above, the training score tends to be much higher than testing score, which indicates overfitting. That's probably because when data set is split into too many folds, only small amount of dataset are used for testing each time, and any possible variation is exaggerated. When k is low, say k=4, the testing score also tends to be low. That's probably because the traing data size is not large enough to capture all the information of the whole dataset. For the charles_act.csv dataset we can see highest traing score when k=6,8,10 for different models.
 
-![](score2.png)
+If we consider both training and testing score, the best model for charles_ask.csv dataset is rid_regression with standardization of features and k=6. The best model for charles_act.csv dataset is linear regression with standardization of both features and targets, k=10.
 
+### Question 6
 
 
 
