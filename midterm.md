@@ -236,4 +236,4 @@ print(avg_tr_score[idx], avg_te_score[idx], avg_tr_mse[idx], avg_te_mse[idx])
 print('Optimal alpha value: ' + format(a_range[idx], '.3f'))
 ```
 
-For the test I did not get the last question correct. I still did not quite figure out the reason since I had pretty much the exact same code but I kept giving me 0.001 as the result.
+For the test I did not get the last question correct. I still did not quite figure out the reason. I had pretty much the exact same code when doing the exam, but it kept giving me 0.001 as the result.
