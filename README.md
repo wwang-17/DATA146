@@ -5,3 +5,5 @@
 [project 2](https://wwang-17.github.io/DATA146/project2.html)
 
 [project 3](https://wwang-17.github.io/DATA146/project3.html)
+
+[midterm](https://wwang-17.github.io/DATA146/midterm.html)
