@@ -18,9 +18,10 @@ y = pns.wealthC
 ```
 
 ### Question 2
-MSE for Linear regression w/o standardization of features: 0.44281007841525455
+* Linear regression w/o standardization of features
+  * MSE: 0.44281007841525455
 
-the coefficients for this model are:
+  * the coefficients for this model are:
 ```
 array([ 3.01812923e-02,  1.07882853e-02, -5.57603897e-04,  8.37880684e-02,
         4.04701739e-02,  6.37198352e-02, -1.40023112e-01,  9.99896825e-02,
@@ -63,6 +64,7 @@ array([ 1.12548658e-01,  5.24358116e-03, -1.08884589e-02,  6.92579735e-02,
 From the above, we can conclude that although standardizing features makes coefficients change a lot, it does not significantly improve the MSE of the fitted model.
 
 ### Question 3
+Features standardized:
 
 
 
