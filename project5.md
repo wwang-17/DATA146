@@ -20,6 +20,7 @@ y = pns.wealthC
 ### Question 2
 * Linear regression w/o standardization of features
   * MSE: 0.44281007841525455
+  * R^2: 0.7358226925730341
 
   * the coefficients for this model are:
 ```
@@ -40,9 +41,11 @@ array([ 3.01812923e-02,  1.07882853e-02, -5.57603897e-04,  8.37880684e-02,
        -6.37787977e-01,  1.35651470e-02, -2.47897601e-01,  2.47897601e-01])
 ```
 
-MSE for linear regression w/ standardization of features: 0.4428132426395805
+* Linear regression w/ standardization of features
+  * MSE: 0.4428132426395805
+  * R^2: 0.7358208048195631
 
-the coefficients for this model are:
+  * the coefficients for this model are:
 ```
 array([ 1.12548658e-01,  5.24358116e-03, -1.08884589e-02,  6.92579735e-02,
         7.36951509e+10,  8.66257201e+10,  7.69209583e+10,  7.91372426e+10,
@@ -61,10 +64,27 @@ array([ 1.12548658e-01,  5.24358116e-03, -1.08884589e-02,  6.92579735e-02,
         2.39952072e+11,  3.49669495e+10, -4.32651302e+10, -4.32651302e+10])
 ```
 
-From the above, we can conclude that although standardizing features makes coefficients change a lot, it does not significantly improve the MSE of the fitted model.
+From the above, we can conclude that although standardizing features makes coefficients change a lot, it does not significantly improve the MSE/R^2 of the fitted model.
 
 ### Question 3
-Features standardized:
+For all models I used testing score to judge the performance of the model. 
+
+* Features not standardized
+  * k=10: optimal alpha = 1.929, test score = 0.7351243214273013
+
+* Features standardized
+  * k=10: optimal alpha=178.571, test score = 0.734797883875111
+
+### Question 4
+* Linear regression
+  * w/o features standardized: R^2: 0.8258271939658526; MSE: 1750276834.9304745
+  * w/ features standardized: R^2: 0.8258260281336447; MSE: 1750288550.4740968
+  From those results we can see that although R^2 improve with using WealthI as feature, the MSE becomes extremely huge, which is not helpful for making predictions.
+
+* Ridge regression
+  * w/o features standardized
+    * optimal alpha(testing score maximized): 138.673; 
+    * testing score: 0.8251526252146713; corresponding mse: 
 
 
 
