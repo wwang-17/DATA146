@@ -67,24 +67,68 @@ array([ 1.12548658e-01,  5.24358116e-03, -1.08884589e-02,  6.92579735e-02,
 From the above, we can conclude that although standardizing features makes coefficients change a lot, it does not significantly improve the MSE/R^2 of the fitted model.
 
 ### Question 3
-For all models I used testing score to judge the performance of the model. 
+For all models I used testing score to judge the performance of the model, and also check the corresponding MSE as an additional criteria for the model performance. For all model I've chosen to use 10-fold, since according to previous experience changing k would nott bring a significant difference to the result.
 
 * Features not standardized
-  * k=10: optimal alpha = 1.929, test score = 0.7351243214273013
+  * optimal alpha = 1.918
+  * test score = 0.7351243213874814
+  * corresponding mse for testing set = 0.4437601409048126
 
 * Features standardized
-  * k=10: optimal alpha=178.571, test score = 0.734797883875111
+  * optimal alpha = 178.367
+  * test score = 0.7347978838768205
+  * corresponding mse for testing set = 0.44431512189470557
 
 ### Question 4
+
+* Features not standardized
+  * optimal alpha = 0
+  * test score = 0.7351221624062736
+  * corresponding mse for testing set = 0.4437638151795899
+
+* Features standardized
+  * optimal alpha = 0
+  * test score = 0.7346360932167861
+  * corresponding mse for testing set = 0.44458667410775776
+
+  While I know is not normal to get 0 for the optimal alpha, I checked the code and ran for a bunch of times, but I still got that result.
+
+
+### Question 5
 * Linear regression
-  * w/o features standardized: R^2: 0.8258271939658526; MSE: 1750276834.9304745
-  * w/ features standardized: R^2: 0.8258260281336447; MSE: 1750288550.4740968
+  * w/o features standardized
+    * R^2: 0.8258271939658526
+    * MSE: 1750276834.9304745
+  * w/ features standardized
+    * R^2: 0.8258260281336447
+    * MSE: 1750288550.4740968
+
   From those results we can see that although R^2 improve with using WealthI as feature, the MSE becomes extremely huge, which is not helpful for making predictions.
 
 * Ridge regression
+  * w/ features standardized
+    * optimal alpha(testing score maximized): 138.673 
+    * testing score: 0.8251526252146713
+    * corresponding mse for testing set: 1754638528.101476
   * w/o features standardized
-    * optimal alpha(testing score maximized): 138.673; 
-    * testing score: 0.8251526252146713; corresponding mse: 
+    * optimal alpha(testing score maximized): 1.061
+    * testing score: 0.8251540421390537
+    * corresponding mse for testing set: 1754626085.3042407
 
+* Lasso regression
+  * w/ features standardized
+    * optimal alpha(testing score maximized): 0
+    * testing score: 0.8251517646558494
+    * corresponding mse for testing set: 1754646342.5832162
+  * w/o features standardized
+    * optimal alpha(testing score maximized): 69.388
+    * testing score: 0.8245432140374891
+    * corresponding mse for testing set: 1760767666.9810853
+ 
+ ### Question 6
+ First of all, all the model using WealhI as the target should not be used since they all have extremely large MSE, even those corresponding to the optimal alpha in ridge and lasso regression. 
+ 
+ For models using WealthC as the target, there is not significant difference between the testing score or MSE for all 6 types of model(three types of regression with or without features standardized). Actually, if we just look at three digits after the decimal point, they are exactly the same. Thus, all these 6 models can be seen as the "best" model.
+ 
 
 
