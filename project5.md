@@ -116,11 +116,11 @@ For all models I used testing score to judge the performance of the model, and a
     * corresponding mse for testing set: 1754626085.3042407
 
 * Lasso regression
-  * w/ features standardized
+  * w/o features standardized
     * optimal alpha(testing score maximized): 0
     * testing score: 0.8251517646558494
     * corresponding mse for testing set: 1754646342.5832162
-  * w/o features standardized
+  * w/ features standardized
     * optimal alpha(testing score maximized): 69.388
     * testing score: 0.8245432140374891
     * corresponding mse for testing set: 1760767666.9810853
