@@ -40,6 +40,10 @@ I got 0.5478515625 for training score and 0.550024402147389 for testing score. I
 
 Based on both test score and accuracy, 5000 trees is most likely to return the best model.
 
+
+* Also test the minimum number of samples required to split an internal node with a range of values
+  From a range of (20, 30) for minimum number of samples to split, the number of 22 returns the best results with testing score at 0.5461200585651538.
+
 #### standardized
 
 * 100 trees
@@ -60,6 +64,9 @@ Based on both test score and accuracy, 5000 trees is most likely to return the b
 
 Based on accuracy, 500 trees is most likely to return the best model. Based on test score, 1000 trees is most likely to return the best model.
 
-### Also test the minimum number of samples required to split an internal node with a range of values.
+
+### Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed?
+
+
 
 
