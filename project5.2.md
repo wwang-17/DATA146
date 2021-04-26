@@ -1,7 +1,5 @@
 ### Execute a K-nearest neighbors classification method on the data. What model specification returned the most accurate results? Did adding a distance weight help?
 
-In order to make sure that training and testing set are kept the same to better evaluate the performance of different types of model, I set random_state = 146.
-
 * w/o distance weight
 
 ![](p5.1.png)
@@ -67,6 +65,8 @@ Based on accuracy, 500 trees is most likely to return the best model. Based on t
 
 ### Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed?
 
+I replaced all wealth class 2 with 3, and then go through the same process.
+
 #### KNN
 
 * w/o distance
@@ -122,6 +122,19 @@ Based on testing score, 500 trees is the most optimal one, which is slightly low
     * accuracy: 0.48462664714494874
 
 Based on both accuracy and testing score, 5000 trees is the most optimal one. They are both slightly lower than the the maximized accuracy(0.48657881893606636) and the maximized testing score(0.48755490483162517) correspondingly for the model separating wealth classes 2&3.
+
+For all models, the testing score or accuracy either keeps the same (logistic regression) or changes to an extent too small to be considered significant. That's probably because wealth class 2 has a really small size(64) compared to the total sample size(5121). Merging them together would not bring too significant influence to performance of the models. 
+
+Despite that, my guess for the slight improvement of KNN is that maybe KNN tends to make mistakes through "under-classsifying" samples (i.e. not able to tell that A&B come from two groups when they actually are). When we merge wealth classes 2&3 together, these failures about distincting class 2&3 are ignored so the performance is improved slightly. 
+
+My guess for the reason for logistic regression keeping exactly the same score is that probably mistakes are all for the classification of wealth class 3&4&5, so merging class 2&3 does not change anything here.
+
+I still have not quite understand why model performance slightly decreases for some random forest models. My guess is that maybe there are some samples with great difference belonging to wealth class 2&3 separtely mering together now, which may seems "confusing" to the RF algorithm and negatively influences its ability to make distinction between classes.
+
+### Which of the models produced the best results in predicting wealth of all persons throughout the large West African capital city being described?
+
+The best model I have so far is KNN w/o distance, k=65. However, it does not perform significantly better than the other ones and its testing score is still far from being considered as perfect. That's probably because there are only 4 features to be used for making predictions, and we probably need more than that.
+
 
 
 
